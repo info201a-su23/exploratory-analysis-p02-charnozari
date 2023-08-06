@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(maps)
 
-temp_city <- read.csv('https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data?select=GlobalLandTemperaturesByCity.csv')
+temp_city <- read.csv('../../data/GlobalLandTemperaturesByCity.csv')
 world <- map_data("world")
 
 length(unique(temp_city$Country))
@@ -12,8 +12,6 @@ temp_city_clean <- temp_city %>%
   filter(dt > "2000-01-01") %>% 
   distinct(Country, .keep_all = TRUE) %>% 
   select(region = Country, temp = AverageTemperature)
-
-#diff <- setdiff(world$region, temp_city_clean$region)
 
 world_sub <- inner_join(world, temp_city_clean, by = "region")
 
@@ -34,5 +32,3 @@ worldtemp <- ggplot(data = world_sub, mapping = aes(x = long, y = lat, group = g
   scale_fill_distiller(palette ="RdBu", direction = -1) + # or direction=1
   ggtitle("Global Temperature") +
   plain
-
-worldtemp  
