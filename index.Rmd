@@ -31,12 +31,12 @@ Analyzing data from the Earth Surface Temperature Study can show how the issue o
 
 Sources:
 
-Dryzek, J. S., Norgaard, R. B., & Schlosberg, D. (2011). Oxford Handbook of Climate Change and Society. Oxford University Press. 
+* Dryzek, J. S., Norgaard, R. B., & Schlosberg, D. (2011). Oxford Handbook of Climate Change and Society. Oxford University Press. 
 
-Intergovernmental Panel on Climate Change. (2021, August). 
+* Intergovernmental Panel on Climate Change. (2021, August). 
 Sixth Assessment Report. IPCC. https://www.ipcc.ch/assessment-report/ar6/
 
-USGCRP. (2017, June). Climate science special report: Our globally changing climate. Our Globally Changing Climate - Climate Science Special Report. https://science2017.globalchange.gov/chapter/1/
+* USGCRP. (2017, June). Climate science special report: Our globally changing climate. Our Globally Changing Climate - Climate Science Special Report. https://science2017.globalchange.gov/chapter/1/
 
 ### The Dataset
 
@@ -44,25 +44,25 @@ We found our data set on Kaggle. The data was collected by Berkeley Earth, an in
 
 The Kaggle Data set is split into 5 subsets:
 
-GlobalLandTemperaturesByCity.csv
-8.6m rows
-7 columns
+* GlobalLandTemperaturesByCity.csv
+  + 8.6m rows
+  + 7 columns
 
-GlobalLandTemperaturesByCountry.csv
-577k rows
-4 columns
+* GlobalLandTemperaturesByCountry.csv
+  + 577k rows
+  + 4 columns
 
-GlobalLandTemperaturesByMajorCity.csv
-239k rows
-7 columns
+* GlobalLandTemperaturesByMajorCity.csv
+  + 239k rows
+  + 7 columns
 
-GlobalLandTemperaturesByState.csv
-646k rows
-5 columns
+* GlobalLandTemperaturesByState.csv
+  + 646k rows
+  + 5 columns
 
-GlobalTemperatures.csv
-3192 rows
-9 columns
+* GlobalTemperatures.csv
+  + 3192 rows
+  + 9 columns
 
 One possible limitation of the data set is that the data is not raw. All of the dates are the first of the month, so it seems there is an average calculated for the whole month. Similarly, the data seems to be localized to few specific locations, meaning there is an average taken between many sites to determine the temperature for a larger area. Other possible limitations have to do with data collection. Some regions may have limited historical temperature records, especially in the distant past. Some regions, especially remote or less populated areas, data coverage may be limited or even nonexistent. Urban areas tend to have more weather stations, and this urban heat island effect can introduce biases in the temperature records if not appropriately accounted for. This can lead to uncertainties in the representation of temperature changes.
 
@@ -78,13 +78,13 @@ Aside from the limitations present within our data set, our project has a focus 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+Add description
 
 ### Table
 
-Include a table of aggregate information
+This table shows the average temperature of each country in 1990 and in 2013, and the difference between the two years. The purpose of this table is to illustrate the trend of global temperatures increasing over time.
 
-Describe why you included the table and what information it reveals
+Add table
 
 ### Chart 1
 
@@ -104,9 +104,4 @@ For our second chart, we wanted to examine the trends in average temperatures fo
 
 ### Chart 3
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
-```
+Add map and description
