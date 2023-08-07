@@ -1,6 +1,6 @@
 # Exploratory Analysis
 
-Link to your group's exploratory analysis here: https://info201a-su23.github.com.uo/exploratory-analysis-p02-charnozari/  
+Link to your group's exploratory analysis here: https://info201a-su23.github.io/exploratory-analysis-p02-charnozari/  
 (Update this link when you have your actual report- the above link is simply a template)
 
 The purpose of this assignment is to provide you with the opportunity to explore your final project data and become familiar with collaborative coding techniques. By completing the assignment, you will demonstrate the following skills:
