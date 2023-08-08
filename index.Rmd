@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Exploratory Analysis"
 output: html_document
@@ -108,3 +109,119 @@ The map of all countries captured in our dataset helps to provide a visual of ho
 
 ```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
 ```
+=======
+---
+title: "Exploratory Analysis"
+output: html_document
+---
+```{r setup, echo=FALSE, message = FALSE} 
+source("summary.R")
+```
+## Average Global Temperatures Over The Years
+
+### Authors
+
+Charlotte Lucia Nozari (charnoz@uw.edu), Humail Fatima (humail28@uw.edu), Jenny Speelmon (jspeel@uw.edu), and Leila Peitsch (lpeitsch@uw.edu)
+
+### Date
+
+Summer 2023
+
+### Abstract
+
+We will be examining trends in Earth Surface Temperature data from the 16 century through 2013. We will analyze average temperatures in various regions of the world, sorting the data by seasons, countries, and year.
+
+### Keywords
+
+Climate Change; Land Temperatures; Global Comparisons; Latitudes and Longitudes
+
+### Introduction  
+
+Our project aims to interpret, analyze, explain, and present the statistics acquired from our data set to create interactive visualizations and inform our audience about the social issue of climate change. The data set we have chosen is pretty detailed and has five files and thirty-two columns in total. The purpose of the data set is to show people how climate change is not a myth and is an actual threat to our planet as well as the well-being of its inhabitants. Through our project, we hope to answer research questions like “What is the average temperature of a specific region?” or “How has the average temperature of a specific region changed over the span of more than 200 years?.” In addition, we would also include questions like “What regions have experienced extreme transitions in their temperature?” and “How does the latitude and longitude of a region affect the change in its average temperature?” It is important to ask these research questions since they can provide us with factual evidence to support how our climate has changed over the last few hundred years. Our comprehensive and thorough data set can aid us to make clear and concise judgments while also reducing the risk or possibility of making inaccurate statements and insights.
+
+### Related Work  
+
+Analyzing data from the Earth Surface Temperature Study can show how the issue of climate change has evolved over centuries. Global warming and other climate change related concerns have been an increasingly popular topic of argument in many social groups around the world, despite climate scientists' consensus that it is a serious issue (Dryzek et al., 2011). Contributing to the argument that climate change is, in fact, an issue we all need to take action on, our data analysis will provide clear visuals on the extent of temperature changes around the world. Additionally, it is very likely that human activity has been significantly involved in the greatly increasing temperatures of Earth (USGCRP, 2017). Using temperature data starting from 1750 can show how much temperatures have risen aligned with time periods with vast amounts of human pollution, like the Industrial Revolution. While we will not have enough research and data to make claims regarding climate change as a whole, we hope to find interesting correlations in the temperature data we will use. For more information on the widespread impacts of global warming, reports like the IPCC Assessment Reports provide analyses that consider more factors than just temperatures (IPCC, 2021). There is a massive amount of research and commentaries on climate change related issues, so the resources listed here are just the tip of the iceberg.
+
+Sources:
+
+Dryzek, J. S., Norgaard, R. B., & Schlosberg, D. (2011). Oxford Handbook of Climate Change and Society. Oxford University Press. 
+
+Intergovernmental Panel on Climate Change. (2021, August). 
+Sixth Assessment Report. IPCC. https://www.ipcc.ch/assessment-report/ar6/
+
+USGCRP. (2017, June). Climate science special report: Our globally changing climate. Our Globally Changing Climate - Climate Science Special Report. https://science2017.globalchange.gov/chapter/1/
+
+### The Dataset
+
+We found our data set on Kaggle. The data was collected by Berkeley Earth, an independent U.S. non-profit organization focused on environmental data science and analysis. The data was collected by filtering and merging 16 preexisting data archives, resulting in 1.6 billion temperature reports from over 39,000 station locations, from 1750 to the present. Founders of Berkeley Earth, Richard and Elizabeth Muller, compiled this data set in order to address and debunk the major concerns that were held by climate change skeptics.
+
+The Kaggle Data set is split into 5 subsets:
+
+* GlobalLandTemperaturesByCity.csv
+  + 8.6m rows
+  + 7 columns
+
+* GlobalLandTemperaturesByCountry.csv
+  + 577k rows
+  + 4 columns
+
+* GlobalLandTemperaturesByMajorCity.csv
+  + 239k rows
+  + 7 columns
+
+* GlobalLandTemperaturesByState.csv
+  + 646k rows
+  + 5 columns
+
+* GlobalTemperatures.csv
+  + 3192 rows
+  + 9 columns
+
+One possible limitation of the data set is that the data is not raw. All of the dates are the first of the month, so it seems there is an average calculated for the whole month. Similarly, the data seems to be localized to few specific locations, meaning there is an average taken between many sites to determine the temperature for a larger area. Other possible limitations have to do with data collection. Some regions may have limited historical temperature records, especially in the distant past. Some regions, especially remote or less populated areas, data coverage may be limited or even nonexistent. Urban areas tend to have more weather stations, and this urban heat island effect can introduce biases in the temperature records if not appropriately accounted for. This can lead to uncertainties in the representation of temperature changes.
+
+### Implications
+
+By answering our guiding research questions, we would want to be able to show increasing average temperatures on an international scale - as it would provide some suggestive evidence of the global climate change issue. This would not only put pressure on the U.S. federal government, but on other world leaders to push for generalized climate change policy. On a national level, while there are currently many proposals for climate change policies and many U.S. government officials have made public claims on how they plan to combat rising temperatures, there is little action being taken despite the issue being urgent. Being able to demonstrate noticeable increases in average temperature over an about 270 year timespan would not only alert US and international policymakers of how much damage has been done but how much damage can occur in future if they don't act quickly. Our project may also push manufacturing companies and other agents who aid in global warming (transportation businesses, individual civilians, technology empires) to consider their role in this growing problem and implore them to be more environmentally conscious.
+
+### Limitations & Challenges
+
+An important limitation we noticed in our data set was the lack of data for certain geographical locations. For example, we will not be able to make insights regarding the change in temperatures for the territory of Greenland as well as certain countries in Central and East Africa because they have not been included in the list of countries. Another challenge presented by our data set is the fact that this data only reports rising average temperatures of specified regions and doesn't address or give any insight into possible causes to rising temperatures. While it is possible to use any conclusions derived from our analysis in conjunction with a data set that addresses who and what is causing the temperature changes shown in our data set, within the scope of our data set, these questions are left up to speculation.
+
+Aside from the limitations present within our data set, our project has a focus on climate change which has become a divisive political issue. In 2019, New York Times reported 130 elected congress members voiced doubt surrounding the science of climate change - which provides a challenge surrounding what we intend to prove with our analysis and what others will takeaway in order to fit their personal agenda.
+
+### Summary Information
+
+The findings show an overall trend of temperatures increasing from the year 1990 to the year 2013. The average temperature in 1990 in the US was `r average_temp_us_1990_function()`, and this average increased to `r average_temp_us_2013_function()` in the year 2013, an increase of `r average_temp_diff_US_function()`. A similar trend is seen in China, where the average temperature in 1990 was `r average_temp_CN_1990_function()`, and increased to `r average_temp_CN_2013_function()` in 2013.
+
+### Table
+
+```{r table, echo = FALSE, message = FALSE, code = readLines("Table.R")}
+```
+
+This table shows the average temperature of each country in 1990 and in 2013, and the difference between the two years. The purpose of this table is to illustrate the trend of global temperatures increasing over time. 
+
+### Chart 1
+
+Our first chart focuses specifically on China during this time period, so we can analyze the temperature changes in a major, powerful country that covers a significant amount of land in the world. Looking at the most recent 23 years of this data allows us to find any recent patterns in temperature changes. All of the cities follow generally the same pattern of spikes and decreases over the years. Some cities are much warmer or cooler than others as a whole, because these cities are located in different areas of the country. While these sixteen cities have smaller increases and decreases from 1990 to 2012, in 2013 they all have a significant increase in temperature, which is the largest increase shown on this graph. This could be due to an increase in greenhouse gases during this time, resulting in a notable increase in temperatures.
+
+
+```{r, echo = FALSE, message = FALSE, code = readLines("chart1_example.R")}
+```
+
+### Chart 2
+
+For our second chart, we wanted to examine the trends in average temperatures for the US. To simplify our data, we chose the three major cities of Chicago, Los Angeles, and New York. For each of these cities, we calculated the average temperature of each year starting from 1990 to 2013. Chicago and New York being on the East side of the country, we can tell that they have similar average temperature. On the other hand, Los Angeles being on the West coast has different average temperatures. However, all three of them seem to have an irregular pattern emerge after 1996 till the 2000 where the average temperature for Chicago and New York increase while decreasing for Los Angeles. 
+
+```{r, echo = FALSE, message = FALSE, code = readLines("chart2_example.R")}
+```
+
+### Chart 3
+
+Include a chart
+
+Describe why you chose this chart and what information it reveals
+
+```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
+```
+>>>>>>> a66f1c4adc8e3fbf29825c05128889c480342e9b
