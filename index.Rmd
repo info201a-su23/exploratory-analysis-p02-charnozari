@@ -2,7 +2,9 @@
 title: "Exploratory Analysis"
 output: html_document
 ---
-
+```{r setup, echo=FALSE, message = FALSE} 
+source("summary.R")
+```
 ## Average Global Temperatures Over The Years
 
 ### Authors
@@ -31,12 +33,12 @@ Analyzing data from the Earth Surface Temperature Study can show how the issue o
 
 Sources:
 
-* Dryzek, J. S., Norgaard, R. B., & Schlosberg, D. (2011). Oxford Handbook of Climate Change and Society. Oxford University Press. 
+Dryzek, J. S., Norgaard, R. B., & Schlosberg, D. (2011). Oxford Handbook of Climate Change and Society. Oxford University Press. 
 
-* Intergovernmental Panel on Climate Change. (2021, August). 
+Intergovernmental Panel on Climate Change. (2021, August). 
 Sixth Assessment Report. IPCC. https://www.ipcc.ch/assessment-report/ar6/
 
-* USGCRP. (2017, June). Climate science special report: Our globally changing climate. Our Globally Changing Climate - Climate Science Special Report. https://science2017.globalchange.gov/chapter/1/
+USGCRP. (2017, June). Climate science special report: Our globally changing climate. Our Globally Changing Climate - Climate Science Special Report. https://science2017.globalchange.gov/chapter/1/
 
 ### The Dataset
 
@@ -78,19 +80,19 @@ Aside from the limitations present within our data set, our project has a focus 
 
 ### Summary Information
 
-Add description
+The findings show an overall trend of temperatures increasing from the year 1990 to the year 2013. The average temperature in 1990 in the US was `r average_temp_us_1990_function()`, and this average increased to `r average_temp_us_2013_function()` in the year 2013, an increase of `r average_temp_diff_US_function()`. A similar trend is seen in China, where the average temperature in 1990 was `r average_temp_CN_1990_function()`, and increased to `r average_temp_CN_2013_function()` in 2013.
 
 ### Table
 
-This table shows the average temperature of each country in 1990 and in 2013, and the difference between the two years. The purpose of this table is to illustrate the trend of global temperatures increasing over time.
+```{r table, echo = FALSE, message = FALSE, code = readLines("Table.R")}
+```
 
-Add table
+This table shows the average temperature of each country in 1990 and in 2013, and the difference between the two years. The purpose of this table is to illustrate the trend of global temperatures increasing over time. 
 
 ### Chart 1
 
 Our first chart focuses specifically on China during this time period, so we can analyze the temperature changes in a major, powerful country that covers a significant amount of land in the world. Looking at the most recent 23 years of this data allows us to find any recent patterns in temperature changes. All of the cities follow generally the same pattern of spikes and decreases over the years. Some cities are much warmer or cooler than others as a whole, because these cities are located in different areas of the country. While these sixteen cities have smaller increases and decreases from 1990 to 2012, in 2013 they all have a significant increase in temperature, which is the largest increase shown on this graph. This could be due to an increase in greenhouse gases during this time, resulting in a notable increase in temperatures.
 
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r, echo = FALSE, message = FALSE, code = readLines("chart1_example.R")}
 ```
@@ -104,4 +106,9 @@ For our second chart, we wanted to examine the trends in average temperatures fo
 
 ### Chart 3
 
-Add map and description
+Include a chart
+
+Describe why you chose this chart and what information it reveals
+
+```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
+```
