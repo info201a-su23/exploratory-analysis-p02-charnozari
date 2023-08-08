@@ -39,3 +39,5 @@ worldtemp <- ggplot(data = world_sub, mapping = aes(x = long, y = lat, group = g
   scale_fill_distiller(name = "Avg. Temp in °C", palette ="RdBu", direction = -1) + # or direction=1
   ggtitle("Global Temperatures") +
   plain
+
+worldtemp

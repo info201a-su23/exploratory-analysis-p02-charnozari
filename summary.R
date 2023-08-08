@@ -1,6 +1,6 @@
 library(dplyr)
 
-Cdataset <- read.csv("C:/Users/charl/info201/exploratory-analysis-p02-charnozari/GlobalLandTemperaturesByCity.csv")
+Cdataset <- read.csv("../../data/GlobalLandTemperaturesByCity.csv")
 Cdataset$dt <- as.Date(Cdataset$dt)
 data_1990_US <- Cdataset %>%
   filter(dt >= as.Date("1990-01-01") & dt <= as.Date("1990-12-31") & Country == "United States")
