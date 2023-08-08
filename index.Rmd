@@ -104,4 +104,7 @@ For our second chart, we wanted to examine the trends in average temperatures fo
 
 ### Chart 3
 
-Add map and description
+The map of all countries captured in our dataset helps to provide a visual of how temperatures fluctuate across different regions. It also helps to emphasize what countries could be affected most by rising temperatures, as various countries within Latin America, Africa, and South/SE Asia already have high average temperatures (20 - 30 °C / 68 - 86 °F).
+
+```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
+```
