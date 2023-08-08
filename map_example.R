@@ -34,10 +34,10 @@ plain <- theme(
 
 # Plot map
 worldtemp <- ggplot(data = world_sub, mapping = aes(x = long, y = lat, group = group)) + 
-  coord_fixed(1.3) +
+  coord_equal() +
   geom_polygon(aes(fill = temp)) +
   scale_fill_distiller(name = "Avg. Temp in °C", palette ="RdBu", direction = -1) + # or direction=1
-  ggtitle("Global Temperatures") +
+  ggtitle("Global Temperatures (2000-2015)") +
   plain
 
 worldtemp

@@ -88,7 +88,10 @@ The findings show an overall trend of temperatures increasing from the year 1990
 
 This table shows the average temperature of each country in 1990 and in 2013, and the difference between the two years. The purpose of this table is to illustrate the trend of global temperatures increasing over time.
 
-### Chart 1
+```{r table, echo = FALSE, message = FALSE, code = readLines("Table.R")}
+```
+
+### Chart 1: Average Temperature of Major Cities in China
 
 Our first chart focuses specifically on China during this time period, so we can analyze the temperature changes in a major, powerful country that covers a significant amount of land in the world. Looking at the most recent 23 years of this data allows us to find any recent patterns in temperature changes. All of the cities follow generally the same pattern of spikes and decreases over the years. Some cities are much warmer or cooler than others as a whole, because these cities are located in different areas of the country. While these sixteen cities have smaller increases and decreases from 1990 to 2012, in 2013 they all have a significant increase in temperature, which is the largest increase shown on this graph. This could be due to an increase in greenhouse gases during this time, resulting in a notable increase in temperatures.
 
@@ -97,17 +100,16 @@ Here's an example of how to run an R script inside an RMarkdown file:
 ```{r chart 1, echo = FALSE, message = FALSE, code = readLines("chart1_example.R")}
 ```
 
-### Chart 2
+### Chart 2: Average Temperature of Major Cities (LA, NY, and Chicago)
 
 For our second chart, we wanted to examine the trends in average temperatures for the US. To simplify our data, we chose the three major cities of Chicago, Los Angeles, and New York. For each of these cities, we calculated the average temperature of each year starting from 1990 to 2013. Chicago and New York being on the East side of the country, we can tell that they have similar average temperature. On the other hand, Los Angeles being on the West coast has different average temperatures. However, all three of them seem to have an irregular pattern emerge after 1996 till the 2000 where the average temperature for Chicago and New York increase while decreasing for Los Angeles. 
 
 ```{r chart 2, echo = FALSE, message = FALSE, code = readLines("chart2_example.R")}
 ```
 
-### Chart 3
+### Chart 3: Map of Avgerage Global Temperatures
 
 The map of all countries captured in our dataset helps to provide a visual of how temperatures fluctuate across different regions. It also helps to emphasize what countries could be affected most by rising temperatures, as various countries within Latin America, Africa, and South/SE Asia already have high average temperatures (20 - 30 °C / 68 - 86 °F).
 
 ```{r map, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
 ```
-

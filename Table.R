@@ -1,6 +1,8 @@
 library(dplyr)
 library(countrycode)
-Cdataset <- read.csv("GlobalLandTemperaturesByCity.csv")
+library(kableExtra)
+
+Cdataset <- read.csv('../../data/GlobalLandTemperaturesByCity.csv')
 Cdataset$Country <- as.character(Cdataset$Country)
 Cdataset$dt <- as.Date(Cdataset$dt)
 iso_codes <- countrycode(Cdataset$Country, "country.name", "iso2c")
@@ -17,4 +19,6 @@ average_temp_2013 <- filtered_data %>%
   summarize(AverageTemperature_2013 = mean(AverageTemperature, na.rm = TRUE))
 temperature_diff <- merge(average_temp_1990, average_temp_2013, by = "iso_code")
 temperature_diff$TemperatureDifference <- temperature_diff$AverageTemperature_2013 - temperature_diff$AverageTemperature_1990
-print(temperature_diff)
+
+kable(temperature_diff) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
